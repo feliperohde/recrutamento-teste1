@@ -2,7 +2,7 @@
 
 Neste teste prático você deverá implementar um formulário de cadastro que submete informações para um backend fornecido.
 Após o cadastro ter sido realizado com sucesso, deve ser apresentado um dashboard desenvolvido por você para apresentar dois
-gráficos cujos dados devem ser obtidas através da API fornecida. Você também implementará uma visão tabulada dos dados exibidos nos gráficos.
+gráficos cujos dados devem ser obtidos através da API fornecida. Você também implementará uma visão tabulada dos dados exibidos nos gráficos.
 
 Para realizar o teste, siga as orientações abaixo e boa sorte!
 
@@ -78,7 +78,7 @@ Para realizar o teste, siga as orientações abaixo e boa sorte!
     O backend responderá com os seguintes códigos:
 
     * 200 - O cadastro foi feito com sucesso. Neste caso, será retornado um json com o seguinte formato `{"token": "0a1b2c3d4e5f6789"}` no corpo da requisição e você deverá seguir para o passo 2 do exercício;
-    * 400 - Há um erro com ums dos dados que deve ser exibido para o usuário, para que corrija e submeta novamente. Neste caso, será retornado um json no corpo da requisição com o seguinte formato `{"message": "CEP inconsistente com o endereço"}`;
+    * 400 - Há um erro com um dos dados que deve ser exibido para o usuário, para que corrija e submeta novamente. Neste caso, será retornado um json no corpo da requisição com o seguinte formato `{"message": "CEP inconsistente com o endereço"}`;
     * 409 - O email informado já existe. Uma mensagem deve ser exibida para o usuário;
     * Qualquer código 5xx ou erro de timeout - Deve ser exibida uma mensagem de que houve um erro de comunicação e o usuário deve tentar novamente mais tarde.
 
