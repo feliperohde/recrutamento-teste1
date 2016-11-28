@@ -17,7 +17,7 @@ Para realizar o teste, siga as orientações abaixo e boa sorte!
     * Rua * (streetName)
     * Número * (number)
     * Complemento (complement)
-    * Bairro (neighbourbood)
+    * Bairro (neighbourhood)
     * País * (country)
     * Estado * (state)
     * Cidade * (city)
