@@ -107,20 +107,19 @@ Para realizar o teste, siga as orientações abaixo e boa sorte!
     
     Browser | Distribuição (%)
     ------- | ---------------:
-    Chrome  | 50,12
-    Firefox | 20,88
-    IE      | 22,00
-    Opera   |  1,15
-    Safari  |  5,85
-
+    Chrome  | 31,09
+    Firefox | 21,87
+    IE      | 20,10
+    Opera   | 15,87
+    Safari  | 11,07
 
     Tabela com a média de temperaturas:
 
 
     Cidade         | Jan  | Fev  | Mar  | Abr  | Mai  | Jun  | Jul  | Ago  | Set  | Out  | Nov  | Dez
     ---------------|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|----:
-    New York       | 0,5  | 1,5  | 6,0  | 11,5 | 17,0 | 22,0 | 24,5 | 24,0 | 20,0 | 14,0 | 9,5  | 3,0
-    Rio de Janeiro | 26,2 | 27,0 | 26,1 | 25,3 | 23,9 | 22,7 | 21,4 | 22,6 | 22,8 | 23,7 | 24,0 | 25,9
-    Tokyo          | 5,5  | 6,6  | 9,1  | 14,6 | 18,2 | 21,0 | 25,5 | 26,2 | 23,4 | 18,6 | 12,3 | 8,0
+    New York       | 16,2 | 14,8 | 14,6 | 18,0 | 14,9 | 14,1 | 15,3 | 17,8 | 18,6 | 15,8 | 18,6 | 16,2
+    Rio de Janeiro | 13,7 | 11,3 | 13,3 | 14,2 | 13,3 | 14,3 | 13,3 | 13,0 | 14,9 | 13,4 | 12,7 | 11,7
+    Tokyo          | 10,3 | 10,8 | 10,5 |  9,7 | 10,6 |  9,8 | 11,5 | 12,0 |  9,2 | 10,2 | 10,6 |  8,9
 
     Note que nas tabelas os dados devem estar ordenados por ordem alfabética dos dados da primeira coluna. Nos gráficos, use a ordem que achar que faz mais sentido.
