@@ -69,7 +69,7 @@ Para realizar o teste, siga as orientações abaixo e boa sorte!
     > 	"streetName": "Rua Ipiranga",
     > 	"number": "1000",
     > 	"complement": "conjunto 23",
-    > 	"neighbourbood": "Centro",
+    > 	"neighbourhood": "Centro",
     > 	"country": "BR",
     > 	"state": "São Paulo",
     > 	"city": "São Paulo"
