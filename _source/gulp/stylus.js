@@ -64,7 +64,7 @@ export default function(gulp, plugins, args, config, taskTarget, browserSync) {
     .pipe(plugins.plumber())
     .pipe(plugins.sourcemaps.init())
     .pipe(plugins.stylus({
-      compress: true,
+      compress: (args.production) ?  true : false,
       disableCache: true,
       paths:  ['node_modules', 'styles/globals'],
       import: ['jeet/stylus/jeet', 'stylus-type-utils', 'nib', 'rupture/rupture'],
@@ -75,7 +75,6 @@ export default function(gulp, plugins, args, config, taskTarget, browserSync) {
       plugins.postcss(
 
         [
-
           autoprefixer({browsers: ['last 2 version', '> 5%', 'safari 5', 'ios 6', 'android 4']}),
 
           cssModules({
@@ -117,7 +116,7 @@ export default function(gulp, plugins, args, config, taskTarget, browserSync) {
               //for insane obfuscating
               //return  Math.random().toString(36).substr(2, 12);
               if(args.production) {
-                return '_' + file + '_' + randomString();
+                return '_' + file + '_' + randomString(12, name + file);
               } else {
                 return '_' + file + '_' + toCamelCase(name);
               }

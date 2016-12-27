@@ -1,0 +1,90 @@
+@import '../../_styles/core/base';
+
+//notification styles
+.c-notification
+  zoom 1
+  display block
+
+  min-width 240px
+  max-width 260px
+
+  position absolute
+  right gutter
+  top gutter
+
+  background-color rgba(0,0,0, 0.8)
+
+  overflow hidden
+
+  border solid 1px transparent
+  border-radius 5px
+
+  box-shadow 0 0 gutter rgba(0,0,0,.2)
+
+  &--200
+    .c-notification_head
+      background-color rgba(219,255,176, .95)
+
+  &--400
+    .c-notification_head
+      background-color rgba(255,220,56, .95)
+
+  &--409
+    .c-notification_head
+      background-color rgba(255,182,56, .95)
+
+  &[class*="5"] // 5xx errors
+    .c-notification_head
+      background-color rgba(255,117,56, .95)
+
+.c-notification_head
+  background-color rgba(0,0,0, 0.1)
+  height 36px
+
+  position relative
+
+.c-notification_title
+  text-align center
+  @extend .f-roboto
+  font-weight bold
+  color $dark-gray
+  font-size remify(14px)
+  line-height remify(36px)
+
+.c-notification_close
+  display block
+  width 24px
+  height 24px
+
+  position absolute
+  right (gutter / 2)
+  top (gutter / 2)
+
+  text-align center;
+
+  background-color $dark-gray
+
+  color white
+  font-size remify(14px)
+  line-height remify(24px)
+  @extend .f-roboto
+
+  border-radius 50%
+  overflow hidden;
+
+.c-notification_body
+  padding gutter
+  font-size remify(14px)
+  line-height remify(24px)
+  @extend .f-roboto
+  text-align left
+
+.c-notification_content
+  @extend .clear
+  color white
+
+
++above(desk-bk)
+  .c-notification
+    max-width 400px
+

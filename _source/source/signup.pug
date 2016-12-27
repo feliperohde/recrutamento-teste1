@@ -2,11 +2,21 @@ extends _layouts/layout
 
 block content
 
+  //- .c-notification
+  //-   .c-notification_head
+  //-     h6.c-notification_title.c-title Alerta
+  //-     span.c-notification_close x
+
+  //-   .c-notification_body
+  //-     .c-notification_content.c-text Não foi possível cadastrar
+
+
   section.c-section
     .wrapper
-      form.c-form--grid
+      form.c-form--grid(method='post', id='newuserform')
 
         .c-form_body
+
           .c-form_row
             input.c-input(name='fullName', id='fullName', placeholder='ex: Felipe Rohde dos Santos', type='text', required='true')
             label.c-form_label(for='fullName') Nome completo
@@ -27,7 +37,7 @@ block content
             label.c-form_label(for='birthDate') Data de nascimento
 
           .c-form_row
-            input.c-input(name='zipCode', id='zipCode', placeholder='ex: 01306-10', pattern='\(\d{2}\)\d{4}-\d{4}' type='text', required='true')
+            input.c-input(name='zipCode', id='zipCode', placeholder='ex: 01306-10', pattern='[0-9]{5}-[0-9]{3}' type='text', required='true')
             label.c-form_label(for='zipCode') CEP
 
           .c-form_row
@@ -77,10 +87,16 @@ block content
 
           .c-form_row
             select.c-select(name='state', id='state', placeholder='Estado', required='true')
+              option(value='RS') Rio Grande do sul
+              option(value='SP') São Paulo
+              option(value='RJ') Rio de Janeiro
             label.c-form_label(for='state') Estado
 
           .c-form_row
             select.c-select(name='city', id='city', placeholder='Cidade', required='true')
+              option(value='RS') Alegria
+              option(value='SP') São Paulo
+              option(value='RJ') Rio de Janeiro
             label.c-form_label(for='city') Cidade
 
           .c-form_row
