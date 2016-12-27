@@ -1,0 +1,88 @@
+@import '../../_styles/core/base';
+
+.c-form
+  zoom 1
+
+.c-form_row
+  @extend .clear
+  margin (gutter * 3) 0
+  width 100%
+  display table
+
+.c-form_body
+  @extend .clear
+  padding gutter
+
+.c-form_label
+  @extend .f-roboto
+  font-size remify(16px)
+  font-weight 300
+
+  display table-header-group
+
+  transition all 200ms ease
+
+////
+.c-input
+.c-textarea
+.c-select
+  width 100%
+  border-bottom solid 1px $gray
+  color $dark-gray
+
+  transition all 200ms ease
+
+  &::-webkit-input-placeholder
+    color $dark-gray
+  &:-moz-placeholder
+    color $dark-gray
+  &::-moz-placeholder
+    color $dark-gray
+  &:-ms-input-placeholder
+    color $dark-gray
+
+  &:focus
+    border-color $pink
+
+    + .c-form_label
+      color $pink
+
+.c-input
+.c-select
+  height 40px
+
+.c-input,
+.c-select
+  background-color transparent
+  border-right none
+  border-left none
+  border-top none
+
+.c-textarea
+  resize none
+  min-height 100px
+  padding gutter
+
+.c-form--inline
+  @extend .c-form
+
+  .c-form_row
+    display inline-block
+    vertical-align middle
+
+  +above(tabl-bk)
+    .c-form_row
+      min-width initial
+
+
+.c-form--grid
+  @extend .c-form
+  @extend .clear
+
+  .c-form_row
+    float left
+
+  +above(tabl-bk)
+    .c-form_row
+      width 50%
+      padding 0 gutter

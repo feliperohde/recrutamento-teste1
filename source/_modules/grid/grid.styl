@@ -1,0 +1,88 @@
+@import '../../_styles/core/base';
+
+.c-grid
+  zoom 1
+  padding 0 gutter
+
+.c-grid_row
+  @extend .clear
+  margin-right -(gutter)
+  margin-left -(gutter)
+
+[class*='c-grid_col']
+  //padding 0 gutter
+
+  // manual uncycle
+  &[class*="--sm-23"] ~ &[class*="--sm-13"]
+  &[class*="--md-23"] ~ &[class*="--md-13"]
+  &[class*="--lg-23"] ~ &[class*="--lg-13"]
+
+  &[class*="--sm-13"] ~ &[class*="--sm-23"]
+  &[class*="--md-13"] ~ &[class*="--md-23"]
+  &[class*="--lg-13"] ~ &[class*="--lg-23"]
+
+  &[class*="--sm-24"] ~ &[class*="--sm-24"]
+  &[class*="--md-24"] ~ &[class*="--md-24"]
+  &[class*="--lg-24"] ~ &[class*="--lg-24"]
+    margin-right 0
+
+  // 1/2 (100/2)
+  &[class*="--sm-12"]
+    column(1/2, cycle: 2)
+
+  // 1/3 1 part of (100/3)
+  &[class*="--sm-13"]
+    column(1/3, cycle: 3)
+
+  // 1/4 1 part of(100/4)
+  &[class*="--sm-14"]
+    column(1/4, cycle: 4)
+
+  // 2/3 2 parts of (100/3)
+  &[class*="--sm-23"]
+    column(2/3)
+
+  // 2/4 2 parts of (100/4)
+  &[class*="--sm-24"]
+    column(2/4)
+
+  &[class*="--inline"]
+    float initial !important
+    clear initial !important
+    display inline-block !important
+
+    + [class*="--inline"]
+      margin-left -4px !important
+
+
+  +above(tabl-bk)
+    &[class*="--md-12"]
+      column(1/2, cycle: 2)
+
+    &[class*="--md-13"]
+      column(1/3, cycle: 3)
+
+    &[class*="--md-14"]
+      column(1/4, cycle: 4)
+
+    &[class*="--md-23"]
+      column(2/3)
+
+    &[class*="--md-24"]
+      column(2/4)
+
+  +above(desk-bk)
+    &[class*="--lg-12"]
+      column(1/2, cycle: 2)
+
+    &[class*="--lg-13"]
+      column(1/3, cycle: 3)
+
+    &[class*="--lg-14"]
+      column(1/4, uncycle: 2, cycle: 4)
+
+    &[class*="--lg-23"]
+      column(2/3)
+
+    &[class*="--lg-24"]
+      column(2/4)
