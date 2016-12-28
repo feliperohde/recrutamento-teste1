@@ -8,8 +8,11 @@ import nib from "nib";
 import cssModules from "postcss-modules";
 import fs from "fs";
 import gutil from "gulp-util";
-import glob from "glob";
+import multiglob from "multi-glob";
 import concat from "gulp-concat";
+import md5 from "js-md5";
+
+let glob = multiglob.glob;
 
 export default function(gulp, plugins, args, config, taskTarget, browserSync) {
 
@@ -116,9 +119,11 @@ export default function(gulp, plugins, args, config, taskTarget, browserSync) {
               //for insane obfuscating
               //return  Math.random().toString(36).substr(2, 12);
               if(args.production) {
-                return '_' + file + '_' + randomString(12, name + file);
+                // return '_' + file + '_' + randomString(12, name + file);
+                return '_' + md5(name + file);
               } else {
-                return '_' + file + '_' + toCamelCase(name);
+                // return '_' + file + '_' + toCamelCase(name); deu ruim
+                return '_' + toCamelCase(name);
               }
 
             }
@@ -142,7 +147,7 @@ export default function(gulp, plugins, args, config, taskTarget, browserSync) {
   // Stylus compilation
   gulp.task('stylus', ['stylusmain'], () => {
 
-    return glob('./source/_modules/**/**.styl', function (er, files) {
+    return glob(['./source/_modules/**/**.styl', './source/_components/**/**.styl'], function (er, files) {
     // files is an array of filenames.
     // If the `nonull` option is set, and nothing
     // was found, then files is ["**/*.js"]
@@ -154,8 +159,8 @@ export default function(gulp, plugins, args, config, taskTarget, browserSync) {
 
       for (var i = files.length - 1; i >= 0; i--) {
         stylusCompileTask(files[i], (i == 0) ? true : false);
-      }
 
+}
     });
 
   });

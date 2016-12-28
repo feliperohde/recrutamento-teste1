@@ -1,0 +1,46 @@
+@import '../../_styles/core/base';
+
+@import '../../_modules/button/button';
+
+
+.c-input--toggle
+  display none
+  position fixed
+
+  + .o-graphs
+    thead
+      display none
+    td
+    th
+      color transparent
+
+
+  &:checked
+    + .o-graphs
+      thead
+        display initial
+      td
+      th
+        color $dark-gray
+
+      .c-graph_bar
+        display none
+
+/////////////////////////////
+.o-graphs_button
+  @extend .c-button
+  max-width 200px;
+/////////////////////////////
+.o-graphs
+  zoom 1
+  position relative
+
+.o-graphs_options
+  padding gutter
+  background-color $blue
+
+
+/////////////////////////////
+.browsers-hit
+  .browser-usage
+    min-width 150px

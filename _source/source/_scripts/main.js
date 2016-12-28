@@ -7,6 +7,7 @@ import Debounce from '../_modules/utils/debounce';
 import Throttle from '../_modules/utils/throttle';
 import Xhr from '../_modules/utils/xhr';
 import Notification from '../_modules/notification/notification';
+import Math from '../_modules/utils/math';
 
 import css from '../_styles/css_modules_all.json';
 
@@ -49,8 +50,10 @@ $(() => {
       notification.Push(data.msg, data.status);
 
       if (data.status === 200 ) {
-        xhr.Post({data: data.data, url: 'http://www.improving.com.br/api/test/hits-by-browser' }, function (data) {
-          console.log(data);
+        xhr.Post({data: data.data, url: 'http://www.improving.com.br/api/test/hits-by-browser' }, function (reponse) {
+          let math = new Math();
+
+          math.Total(reponse.data);
         });
       }
 
@@ -58,5 +61,71 @@ $(() => {
 
 
   } );
+
+  ///for testing
+  var data = {
+      "email": "fr.rohde@gmail.com",
+      "password": '',
+      "fullName": '',
+      "birthDate": '',
+      "zipCode": '',
+      "streetName": '',
+      "number": '',
+      "complement": '',
+      "neighbourhood": '',
+      "country": '',
+      "state": '',
+      "city": ''
+    };
+
+  xhr.Post({data: JSON.stringify(data)}, function (data) {
+      var notification = new Notification({cssMap: css});
+      notification.Push(data.msg, data.status);
+
+      if (data.status === 200 ) {
+        xhr.Post({data: data.data, url: 'http://www.improving.com.br/api/test/hits-by-browser' }, function (reponse) {
+          let math = new Math();
+          let totalBrowserAccess = math.Total(JSON.parse(reponse.data));
+
+          let grapsTemplate = '<section class="_cSection" id="results-section">' +
+    '<input class="_cInput_m_toggle" type="checkbox" id="tableMode_toggle">' +
+    '<section class="_oGraphs _cSection">' +
+      '<div class="_wrapper">' +
+        '<div class="_oGraphs_options">' +
+          '<label class="_oGraphs_button" id="tableMode" for="tableMode_toggle">Mudar exibição</label>' +
+        '</div>' +
+        '<div class="_browsersHit _cSection_block">' +
+          '<table class="_cTable">' +
+            '<thead class="_cTable_head">' +
+              '<tr class="_cTable_row">' +
+                '<th class="browser-name _cTable_cell">Browser</th>' +
+                '<th class="_browserUsage _cTable_cell">Distribuição (%)</th>' +
+              '</tr>' +
+            '</thead>' +
+            '<tbody class="_cTable_body">' +
+              '<tr class="_cTable_row">' +
+                '<td class="_cTable_cell _cGraph_m_bar">Chrome<span class="_cGraph_bar">21%</span></td>' +
+                '<td class="_cTable_cell">21%</td>' +
+              '</tr>' +
+              '<tr class="_cTable_row">' +
+                '<td class="_cTable_cell _cGraph_m_bar">Chrome<span class="_cGraph_bar">21%</span></td>' +
+                '<td class="_cTable_cell">21%</td>' +
+              '</tr>' +
+              '<tr class="_cTable_row">' +
+                '<td class="_cTable_cell _cGraph_m_bar">Chrome<span class="_cGraph_bar">21%</span></td>' +
+                '<td class="_cTable_cell">21%</td>' +
+              '</tr>' +
+            '</tbody>' +
+          '</table>' +
+        '</div>' +
+      '</div>' +
+    '</section>' +
+  '</section>';
+
+          console.log(totalBrowserAccess);
+        });
+      }
+
+    });
 
 });

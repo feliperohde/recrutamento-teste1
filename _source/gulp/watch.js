@@ -11,7 +11,8 @@ export default function(gulp, plugins, args, config, taskTarget, browserSync) {
     if (!args.production) {
       gulp.watch([
         path.join(dirs.source, dirs.styles, '**/*.styl'),
-        path.join(dirs.source, dirs.modules, '**/*.styl')
+        path.join(dirs.source, dirs.modules, '**/*.styl'),
+        path.join(dirs.source, dirs.components, '**/*.styl')
       ], ['stylus']);
 
       // Jade Templates

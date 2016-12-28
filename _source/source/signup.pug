@@ -102,31 +102,35 @@ block content
           .c-form_row
             button.c-button(type='submit', value='Enviar', id='submit') Enviar
 
+  section.c-section#results-section
+    input.c-input--toggle(type='checkbox',id='tableMode_toggle')
+    section.c-section.o-graphs
+      .wrapper
 
-  input(type='checkbox', id='tableMode', style='display: none')
-  section.c-section#graphs-section
-    .wrapper
+        .o-graphs_options
+          label.o-graphs_button#tableMode(for="tableMode_toggle") Mudar exibição
 
-      .c-section_block.browsers-hit
-        table.c-table
-          thead.c-table_head
-            tr.c-table_row
-              th.c-table_cell.browser-name Browser
-              th.c-table_cell.browser-usage Distribuição (%)
+        .c-section_block.browsers-hit
+          table.c-table
+            thead.c-table_head
+              tr.c-table_row
+                th.c-table_cell.browser-name Browser
+                th.c-table_cell.browser-usage Distribuição (%)
 
-          tbody.c-table_body
-            tr.c-table_row
-              td.c-table_cell.c-graph--bar Chrome
-                span.c-graph_bar 21%
-              td.c-table_cell 21%
+            tbody.c-table_body
+              tr.c-table_row
+                td.c-table_cell.c-graph--bar Chrome
+                  span.c-graph_bar 21%
+                td.c-table_cell 21%
 
-            tr.c-table_row
-              td.c-table_cell.c-graph--bar Chrome
-                span.c-graph_bar 21%
-              td.c-table_cell 21%
+              tr.c-table_row
+                td.c-table_cell.c-graph--bar Chrome
+                  span.c-graph_bar 21%
+                td.c-table_cell 21%
 
-            tr.c-table_row
-              td.c-table_cell.c-graph--bar Chrome
-                span.c-graph_bar 21%
-              td.c-table_cell 21%
+              tr.c-table_row
+                td.c-table_cell.c-graph--bar Chrome
+                  span.c-graph_bar 21%
+                td.c-table_cell 21%
+
 
