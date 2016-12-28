@@ -120,7 +120,7 @@ export default function(gulp, plugins, args, config, taskTarget, browserSync) {
               //return  Math.random().toString(36).substr(2, 12);
               if(args.production) {
                 // return '_' + file + '_' + randomString(12, name + file);
-                return '_' + md5(name + file);
+                return '_' + md5(name);
               } else {
                 // return '_' + file + '_' + toCamelCase(name); deu ruim
                 return '_' + toCamelCase(name);
