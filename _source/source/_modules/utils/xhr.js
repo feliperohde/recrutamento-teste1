@@ -22,7 +22,7 @@ export default class Xhr {
 
           parent._response.data = this.responseText;
           parent._response.error =  null;
-          parent._response.msg = "Cadastro feito com sucesso! seu token é " + msg.token;
+          parent._response.msg = "Cadastro feito com sucesso!";
 
           break;
 

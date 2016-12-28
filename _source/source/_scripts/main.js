@@ -45,9 +45,14 @@ $(() => {
     };
 
     xhr.Post({data: JSON.stringify(data)}, function (data) {
-
       var notification = new Notification({cssMap: css});
       notification.Push(data.msg, data.status);
+
+      if (data.status === 200 ) {
+        xhr.Post({data: data.data, url: 'http://www.improving.com.br/api/test/hits-by-browser' }, function (data) {
+          console.log(data);
+        });
+      }
 
     });
 

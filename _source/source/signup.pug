@@ -11,7 +11,7 @@ block content
   //-     .c-notification_content.c-text Não foi possível cadastrar
 
 
-  section.c-section
+  section.c-section#form-section
     .wrapper
       form.c-form--grid(method='post', id='newuserform')
 
@@ -102,4 +102,31 @@ block content
           .c-form_row
             button.c-button(type='submit', value='Enviar', id='submit') Enviar
 
+
+  input(type='checkbox', id='tableMode', style='display: none')
+  section.c-section#graphs-section
+    .wrapper
+
+      .c-section_block.browsers-hit
+        table.c-table
+          thead.c-table_head
+            tr.c-table_row
+              th.c-table_cell.browser-name Browser
+              th.c-table_cell.browser-usage Distribuição (%)
+
+          tbody.c-table_body
+            tr.c-table_row
+              td.c-table_cell.c-graph--bar Chrome
+                span.c-graph_bar 21%
+              td.c-table_cell 21%
+
+            tr.c-table_row
+              td.c-table_cell.c-graph--bar Chrome
+                span.c-graph_bar 21%
+              td.c-table_cell 21%
+
+            tr.c-table_row
+              td.c-table_cell.c-graph--bar Chrome
+                span.c-graph_bar 21%
+              td.c-table_cell 21%
 
