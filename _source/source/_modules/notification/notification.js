@@ -37,7 +37,7 @@ export default class Notification {
     $('.' + this.options.cssMap.cNotification)
       .delay(this.options.duration)
       .fadeOut(function () {
-        //$(this).remove();
+        $(this).remove();
       });
 
   }

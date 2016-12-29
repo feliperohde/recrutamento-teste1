@@ -105,24 +105,24 @@ q {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-._016b,
-._f260:before,
-._f260:after {
+._86cc499d,
+._e5b1f106:before,
+._e5b1f106:after {
   content: " ";
   font-size: 0;
   display: block;
 }
-._f260:before,
-._f260:after {
+._e5b1f106:before,
+._e5b1f106:after {
   clear: both;
 }
-._52ed {
+._c4be11f1 {
   font-family: 'Roboto', sans-serif;
 }
 .page {
   padding: 32px;
 }
-._7300 {
+._cf5484d2 {
   *zoom: 1;
   width: auto;
   max-width: 980px;
@@ -133,19 +133,19 @@ q {
   padding-left: 16px;
   padding-right: 16px;
 }
-._7300:before,
-._7300:after {
+._cf5484d2:before,
+._cf5484d2:after {
   content: '';
   display: table;
 }
-._7300:after {
+._cf5484d2:after {
   clear: both;
 }
 body {
   background-color: #f3f3f3;
   font-size: 16px;
 }
-._9629 {
+._49ba3dc7 {
   text-align: center;
   margin: 0;
   background: #fff8e2;
