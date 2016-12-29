@@ -47,7 +47,7 @@ export default class Graph {
                 '<%for(var index in this.data) {%>' +
 
                   '<tr class="<%this.css.cTable_row%>">' +
-                    '<td class="<%this.css.cTable_cell%> <%this.css.cGraph_m_bar%>"><%this.data[index][0]%><span style="width:<% this.math.Percent(this.data[index][1], this.total)%>%" class="<%this.css.cGraph_bar%>"><% this.math.Percent(this.data[index][1], this.total)%>%</span></td>' +
+                    '<td class="<%this.css.cTable_cell%> <%this.css.cGraph_m_bar%>"><%this.data[index][0]%><span style="width:<% this.math.Percent(this.data[index][1], this.total)%>%" class="<%this.css.cGraph_bar%>"><%this.data[index][0]%>(<% this.math.Percent(this.data[index][1], this.total)%>%)</span></td>' +
                     '<td class="<%this.css.cTable_cell%>"><% this.math.Percent(this.data[index][1], this.total)%>%</td>' +
                   '</tr>' +
 

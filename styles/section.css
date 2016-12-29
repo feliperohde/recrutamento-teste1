@@ -1,29 +1,29 @@
-._86cc499d,
-._e5b1f106:before,
-._e5b1f106:after,
-._518b7bd9:before,
-._518b7bd9:after {
+._016b,
+._f260:before,
+._f260:after,
+._b997:before,
+._b997:after {
   content: " ";
   font-size: 0;
   display: block;
 }
-._e5b1f106:before,
-._518b7bd9:before,
-._e5b1f106:after,
-._518b7bd9:after {
+._f260:before,
+._b997:before,
+._f260:after,
+._b997:after {
   clear: both;
 }
-._c4be11f1 {
+._52ed {
   font-family: 'Roboto', sans-serif;
 }
-._518b7bd9 {
+._b997 {
   zoom: 1;
 }
-._e536923a {
+._0930 {
   width: 100%;
 }
 @media only screen and (min-width: 980px) {
-  ._e536923a {
+  ._0930 {
     float: left;
     width: 50%;
   }

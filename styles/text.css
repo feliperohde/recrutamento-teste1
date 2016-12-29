@@ -1,15 +1,15 @@
-._86cc499d,
-._e5b1f106:before,
-._e5b1f106:after {
+._016b,
+._f260:before,
+._f260:after {
   content: " ";
   font-size: 0;
   display: block;
 }
-._e5b1f106:before,
-._e5b1f106:after {
+._f260:before,
+._f260:after {
   clear: both;
 }
-._c4be11f1 {
+._52ed {
   font-family: 'Roboto', sans-serif;
 }
 b,
@@ -20,12 +20,12 @@ i,
 em {
   text-style: italic;
 }
-._1c3c4f39 {
+._5d8c {
   -webkit-writing-mode: horizontal-tb;
       -ms-writing-mode: lr-tb;
           writing-mode: horizontal-tb;
 }
-._71141098 {
+._dd55 {
   -webkit-writing-mode: horizontal-tb;
       -ms-writing-mode: lr-tb;
           writing-mode: horizontal-tb;
