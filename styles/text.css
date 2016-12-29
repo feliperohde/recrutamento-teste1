@@ -1,0 +1,34 @@
+._016b,
+._f260:before,
+._f260:after {
+  content: " ";
+  font-size: 0;
+  display: block;
+}
+._f260:before,
+._f260:after {
+  clear: both;
+}
+._52ed {
+  font-family: 'Roboto', sans-serif;
+}
+b,
+strong {
+  font-weight: bolder;
+}
+i,
+em {
+  text-style: italic;
+}
+._5d8c {
+  -webkit-writing-mode: horizontal-tb;
+      -ms-writing-mode: lr-tb;
+          writing-mode: horizontal-tb;
+}
+._dd55 {
+  -webkit-writing-mode: horizontal-tb;
+      -ms-writing-mode: lr-tb;
+          writing-mode: horizontal-tb;
+}
+
+/*# sourceMappingURL=text.css.map */

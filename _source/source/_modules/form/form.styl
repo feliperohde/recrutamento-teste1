@@ -5,13 +5,15 @@
 
 .c-form_row
   @extend .clear
+  display block
+
+.c-form_field
   margin (gutter * 3) 0
   width 100%
   display table
 
 .c-form_body
   @extend .clear
-  padding gutter
 
 .c-form_label
   @extend .f-roboto
@@ -79,10 +81,12 @@
   @extend .c-form
   @extend .clear
 
-  .c-form_row
-    float left
-
   +above(tabl-bk)
-    .c-form_row
+    .c-form_field
+      float left
       width 50%
-      padding 0 gutter
+      padding-right (gutter / 2)
+
+      + .c-form_field
+        padding-left (gutter / 2)
+        padding-right 0

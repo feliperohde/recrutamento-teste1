@@ -22,7 +22,7 @@ export default class Notification {
   Push (msg, type) {
     let templateEngine = new Template();
 
-    const template = '<div class="' + this.options.cssMap.cNotification + ' ' + this.options.cssMap.cNotification + '_m_<% this.data.type %>">' +
+    const template = '<div class="' + this.options.cssMap.cNotification + ' <% this.css[\"is_m_\" + this.data.type] %>">' +
       '<div class="' + this.options.cssMap.cNotification_head + '"> ' +
         '<h6 class="' + this.options.cssMap.cTitle + ' ' + this.options.cssMap.cNotification_title + '">Alerta</h6><span class="' + this.options.cssMap.cNotification_close + '">x</span> ' +
       '</div>' +
@@ -37,7 +37,7 @@ export default class Notification {
     $('.' + this.options.cssMap.cNotification)
       .delay(this.options.duration)
       .fadeOut(function () {
-        $(this).remove();
+        //$(this).remove();
       });
 
   }

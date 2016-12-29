@@ -1,0 +1,32 @@
+._016b,
+._f260:before,
+._f260:after,
+._b997:before,
+._b997:after {
+  content: " ";
+  font-size: 0;
+  display: block;
+}
+._f260:before,
+._b997:before,
+._f260:after,
+._b997:after {
+  clear: both;
+}
+._52ed {
+  font-family: 'Roboto', sans-serif;
+}
+._b997 {
+  zoom: 1;
+}
+._0930 {
+  width: 100%;
+}
+@media only screen and (min-width: 980px) {
+  ._0930 {
+    float: left;
+    width: 50%;
+  }
+}
+
+/*# sourceMappingURL=section.css.map */

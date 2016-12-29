@@ -82,11 +82,16 @@ export default class Xhr {
 
       that.StateHandler.call(this, that);
 
-      try {
+
+      if (typeof callback === 'function')
         return callback(that._response);
-      } catch (e) {
-        console.log(e);
-      }
+      // else
+      //   throw new Error()
+      // try {
+      //   return callback(that._response);
+      // } catch (e) {
+      //   console.log(e);
+      // }
 
     };
   };

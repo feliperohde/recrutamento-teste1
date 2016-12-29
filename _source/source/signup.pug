@@ -18,119 +18,127 @@ block content
         .c-form_body
 
           .c-form_row
-            input.c-input(name='fullName', id='fullName', placeholder='ex: Felipe Rohde dos Santos', type='text', required='true')
-            label.c-form_label(for='fullName') Nome completo
+            .c-form_field
+              input.c-input(name='fullName', id='fullName', placeholder='ex: Felipe Rohde dos Santos', type='text', required='true')
+              label.c-form_label(for='fullName') Nome completo
+
+            .c-form_field
+              input.c-input(name='email', id='email', placeholder='ex: exemplo@dominio.com', type='email', required='true')
+              label.c-form_label(for='email') Email
 
           .c-form_row
-            input.c-input(name='email', id='email', placeholder='ex: exemplo@dominio.com', type='email', required='true')
-            label.c-form_label(for='email') Email
+            .c-form_field
+              input.c-input(name='password', id='password', placeholder='ex: abC123Tedc', type='password', required='true')
+              label.c-form_label(for='password') Senha
+
+            .c-form_field
+              input.c-input(name='passwordConfirmation', id='passwordConfirmation', placeholder='ex: abC123Tedc', type='password', required='true')
+              label.c-form_label(for='passwordConfirmation') Confirmação de senha
 
           .c-form_row
-            input.c-input(name='password', id='password', placeholder='ex: abC123Tedc', type='password', required='true')
-            label.c-form_label(for='password') Senha
+            .c-form_field
+              input.c-input(name='birthDate', id='birthDate', placeholder='ex: 26/01/1991', type='date', required='true')
+              label.c-form_label(for='birthDate') Data de nascimento
+
+            .c-form_field
+              input.c-input(name='zipCode', id='zipCode', placeholder='ex: 01306-10', pattern='[0-9]{5}-[0-9]{3}' type='text', required='true')
+              label.c-form_label(for='zipCode') CEP
 
           .c-form_row
-            input.c-input(name='passwordConfirmation', id='passwordConfirmation', placeholder='ex: abC123Tedc', type='password', required='true')
-            label.c-form_label(for='passwordConfirmation') Confirmação de senha
-          .c-form_row
-            input.c-input(name='birthDate', id='birthDate', placeholder='ex: 26/01/1991', type='date', required='true')
-            label.c-form_label(for='birthDate') Data de nascimento
+            .c-form_field
+              input.c-input(name='streetName', id='streetName', placeholder='ex: Rua Augusta', type='text', required='true')
+              label.c-form_label(for='streetName') Rua
+
+            .c-form_field
+              input.c-input(name='number', id='number', placeholder='ex: 307', type='number', required='true')
+              label.c-form_label(for='number') Número
 
           .c-form_row
-            input.c-input(name='zipCode', id='zipCode', placeholder='ex: 01306-10', pattern='[0-9]{5}-[0-9]{3}' type='text', required='true')
-            label.c-form_label(for='zipCode') CEP
+            .c-form_field
+              input.c-input(name='complement', id='complement', placeholder='ex: Apt 110', type='text')
+              label.c-form_label(for='complement') Complemento
+
+            .c-form_field
+              input.c-input(name='neighbourhood', id='neighbourhood', placeholder='ex: Bairro Bela Vista', type='text')
+              label.c-form_label(for='neighbourhood') Bairro
 
           .c-form_row
-            input.c-input(name='streetName', id='streetName', placeholder='ex: Rua Augusta', type='text', required='true')
-            label.c-form_label(for='streetName') Rua
+            .c-form_field
+              select.c-select(name='country', id='country', placeholder='País', required='true')
+                option(value='AR') Argentina
+                option(value='BR') Brasil
+                option(value='CL') Chile
+                option(value='CO') Colômbia
+                option(value='CR') Costa Rica
+                option(value='CU') Cuba
+                option(value='DO') República Dominicana
+                option(value='EC') Equador
+                option(value='FR') França
+                option(value='GF') Guiana Francesa
+                option(value='GT') Guatemala
+                option(value='HN') Honduras
+                option(value='HT') Haiti
+                option(value='IT') Itália
+                option(value='AR') Jamaica
+                option(value='MX') México
+                option(value='NI') Nicarágua
+                option(value='PA') Panamá
+                option(value='PE') Peru
+                option(value='PR') Porto Rico
+                option(value='PY') Paraguai
+                option(value='SV') El Salvador
+                option(value='US') Estado Unidos
+                option(value='UY') Uruguai
+                option(value='VE') Venezuela
+              label.c-form_label(for='country') País
+
+            .c-form_field
+              select.c-select(name='state', id='state', placeholder='Estado', required='true')
+                option(value='RS') Rio Grande do sul
+                option(value='SP') São Paulo
+                option(value='RJ') Rio de Janeiro
+              label.c-form_label(for='state') Estado
 
           .c-form_row
-            input.c-input(name='number', id='number', placeholder='ex: 307', type='number', required='true')
-            label.c-form_label(for='number') Número
+            .c-form_field
+              select.c-select(name='city', id='city', placeholder='Cidade', required='true')
+                option(value='RS') Alegria
+                option(value='SP') São Paulo
+                option(value='RJ') Rio de Janeiro
+              label.c-form_label(for='city') Cidade
 
-          .c-form_row
-            input.c-input(name='complement', id='complement', placeholder='ex: Apt 110', type='text')
-            label.c-form_label(for='complement') Complemento
-
-          .c-form_row
-            input.c-input(name='neighbourhood', id='neighbourhood', placeholder='ex: Bairro Bela Vista', type='text')
-            label.c-form_label(for='neighbourhood') Bairro
-
-          .c-form_row
-            select.c-select(name='country', id='country', placeholder='País', required='true')
-              option(value='AR') Argentina
-              option(value='BR') Brasil
-              option(value='CL') Chile
-              option(value='CO') Colômbia
-              option(value='CR') Costa Rica
-              option(value='CU') Cuba
-              option(value='DO') República Dominicana
-              option(value='EC') Equador
-              option(value='FR') França
-              option(value='GF') Guiana Francesa
-              option(value='GT') Guatemala
-              option(value='HN') Honduras
-              option(value='HT') Haiti
-              option(value='IT') Itália
-              option(value='AR') Jamaica
-              option(value='MX') México
-              option(value='NI') Nicarágua
-              option(value='PA') Panamá
-              option(value='PE') Peru
-              option(value='PR') Porto Rico
-              option(value='PY') Paraguai
-              option(value='SV') El Salvador
-              option(value='US') Estado Unidos
-              option(value='UY') Uruguai
-              option(value='VE') Venezuela
-            label.c-form_label(for='country') País
-
-          .c-form_row
-            select.c-select(name='state', id='state', placeholder='Estado', required='true')
-              option(value='RS') Rio Grande do sul
-              option(value='SP') São Paulo
-              option(value='RJ') Rio de Janeiro
-            label.c-form_label(for='state') Estado
-
-          .c-form_row
-            select.c-select(name='city', id='city', placeholder='Cidade', required='true')
-              option(value='RS') Alegria
-              option(value='SP') São Paulo
-              option(value='RJ') Rio de Janeiro
-            label.c-form_label(for='city') Cidade
-
-          .c-form_row
-            button.c-button(type='submit', value='Enviar', id='submit') Enviar
+            .c-form_field
+              button.c-button(type='submit', value='Enviar', id='submit') Enviar
 
   section.c-section#results-section
-    input.c-input--toggle(type='checkbox',id='tableMode_toggle')
-    section.c-section.o-graphs
-      .wrapper
+    //- input.c-input--toggle(type='checkbox',id='tableMode_toggle')
+    //- section.c-section.o-graphs
+    //-   .wrapper
 
-        .o-graphs_options
-          label.o-graphs_button#tableMode(for="tableMode_toggle") Mudar exibição
+    //-     .o-graphs_options
+    //-       label.o-graphs_button#tableMode(for="tableMode_toggle") Mudar exibição
 
-        .c-section_block.browsers-hit
-          table.c-table
-            thead.c-table_head
-              tr.c-table_row
-                th.c-table_cell.browser-name Browser
-                th.c-table_cell.browser-usage Distribuição (%)
+    //-     .c-section_block.browsers-hit
+    //-       table.c-table
+    //-         thead.c-table_head
+    //-           tr.c-table_row
+    //-             th.c-table_cell.browser-name Browser
+    //-             th.c-table_cell.browser-usage Distribuição (%)
 
-            tbody.c-table_body
-              tr.c-table_row
-                td.c-table_cell.c-graph--bar Chrome
-                  span.c-graph_bar 21%
-                td.c-table_cell 21%
+    //-         tbody.c-table_body
+    //-           tr.c-table_row
+    //-             td.c-table_cell.c-graph--bar Chrome
+    //-               span.c-graph_bar 21%
+    //-             td.c-table_cell 21%
 
-              tr.c-table_row
-                td.c-table_cell.c-graph--bar Chrome
-                  span.c-graph_bar 21%
-                td.c-table_cell 21%
+    //-           tr.c-table_row
+    //-             td.c-table_cell.c-graph--bar Chrome
+    //-               span.c-graph_bar 21%
+    //-             td.c-table_cell 21%
 
-              tr.c-table_row
-                td.c-table_cell.c-graph--bar Chrome
-                  span.c-graph_bar 21%
-                td.c-table_cell 21%
+    //-           tr.c-table_row
+    //-             td.c-table_cell.c-graph--bar Chrome
+    //-               span.c-graph_bar 21%
+    //-             td.c-table_cell 21%
 
 

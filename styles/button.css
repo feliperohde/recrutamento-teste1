@@ -1,0 +1,28 @@
+._016b,
+._f260:before,
+._f260:after {
+  content: " ";
+  font-size: 0;
+  display: block;
+}
+._f260:before,
+._f260:after {
+  clear: both;
+}
+._52ed,
+._40c9 {
+  font-family: 'Roboto', sans-serif;
+}
+._40c9 {
+  display: block;
+  min-width: 100px;
+  padding: 10px;
+  font-size: 0.875rem;
+  color: #fff;
+  cursor: pointer;
+  vertical-alignt: bottom;
+  background-color: #f96ec4;
+  border: solid 1px transparent;
+}
+
+/*# sourceMappingURL=button.css.map */

@@ -1,0 +1,14 @@
+a:link {
+  color: $blue;
+}
+a:visited {
+  color: $blue;
+}
+a:hover {
+  color: $light-blue;
+}
+a:active {
+  color: $blue;
+}
+
+/*# sourceMappingURL=link.css.map */

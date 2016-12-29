@@ -13,7 +13,11 @@ export default class Math {
 
   Median (arr) {
 
-  }
+  };
+
+  Percent (val, total) {
+    return (val / total * 100).toFixed(2);
+  };
 
   Total (arr) {
 

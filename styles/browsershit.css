@@ -1,0 +1,85 @@
+._016b,
+._f260:before,
+._f260:after {
+  content: " ";
+  font-size: 0;
+  display: block;
+}
+._f260:before,
+._f260:after {
+  clear: both;
+}
+._52ed,
+._40c9,
+._019d {
+  font-family: 'Roboto', sans-serif;
+}
+._016b,
+._f260:before,
+._f260:after {
+  content: " ";
+  font-size: 0;
+  display: block;
+}
+._f260:before,
+._f260:after {
+  clear: both;
+}
+._52ed,
+._40c9,
+._019d {
+  font-family: 'Roboto', sans-serif;
+}
+._40c9,
+._019d {
+  display: block;
+  min-width: 100px;
+  padding: 10px;
+  font-size: 0.875rem;
+  color: #fff;
+  cursor: pointer;
+  vertical-alignt: bottom;
+  background-color: #f96ec4;
+  border: solid 1px transparent;
+}
+._7cb7 {
+  display: none;
+  position: fixed;
+}
+._7cb7 + ._74fb thead {
+  display: none;
+}
+._7cb7 + ._74fb td,
+._7cb7 + ._74fb th {
+  color: transparent;
+}
+._7cb7:checked + ._74fb thead {
+  display: initial;
+}
+._7cb7:checked + ._74fb td,
+._7cb7:checked + ._74fb th {
+  color: #424242;
+}
+._7cb7:checked + ._74fb ._5a69 {
+  display: none;
+}
+._019d {
+  max-width: 200px;
+}
+._74fb {
+  zoom: 1;
+  position: relative;
+}
+._b55b {
+  padding: 10px;
+  background-color: #0e7da9;
+}
+._ab73 ._2cdd {
+  text-align: left;
+}
+._ab73 ._6b8c {
+  text-align: right;
+  min-width: 150px;
+}
+
+/*# sourceMappingURL=browsershit.css.map */

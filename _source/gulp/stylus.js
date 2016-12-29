@@ -11,8 +11,11 @@ import gutil from "gulp-util";
 import multiglob from "multi-glob";
 import concat from "gulp-concat";
 import md5 from "js-md5";
+import crc from "js-crc";
 
 let glob = multiglob.glob;
+let crc16 =  crc.crc16;
+let crc32 =  crc.crc32;
 
 export default function(gulp, plugins, args, config, taskTarget, browserSync) {
 
@@ -67,7 +70,7 @@ export default function(gulp, plugins, args, config, taskTarget, browserSync) {
     .pipe(plugins.plumber())
     .pipe(plugins.sourcemaps.init())
     .pipe(plugins.stylus({
-      compress: (args.production) ?  true : false,
+      compress: (args.compress) ?  true : false,
       disableCache: true,
       paths:  ['node_modules', 'styles/globals'],
       import: ['jeet/stylus/jeet', 'stylus-type-utils', 'nib', 'rupture/rupture'],
@@ -118,13 +121,25 @@ export default function(gulp, plugins, args, config, taskTarget, browserSync) {
 
               //for insane obfuscating
               //return  Math.random().toString(36).substr(2, 12);
-              if(args.production) {
+              // if(args.production) {
                 // return '_' + file + '_' + randomString(12, name + file);
-                return '_' + md5(name);
-              } else {
-                // return '_' + file + '_' + toCamelCase(name); deu ruim
+
+                if(args.md5)
+                  return '_' + md5(name);
+
+                if(args.crc32)
+                  return '_' + crc32(name);
+
+                if(args.crc16)
+                  return '_' + crc16(name);
+
                 return '_' + toCamelCase(name);
-              }
+
+              // } else {
+              //   // return '_' + file + '_' + toCamelCase(name); deu ruim
+              //   return '_' + toCamelCase(name);
+              //   // return '_' + crc16(name);
+              // }
 
             }
           })
@@ -138,7 +153,7 @@ export default function(gulp, plugins, args, config, taskTarget, browserSync) {
         // Ex: 'src/_styles' --> '/styles'
         path.dirname = path.dirname.replace(dirs.source, '').replace('_', '');
       }))
-    .pipe(gulpif(args.production, plugins.cssnano({rebase: false})))
+    //.pipe(gulpif(args.production, plugins.cssnano({rebase: false})))
     .pipe(plugins.sourcemaps.write('./'))
     .pipe(gulp.dest(dest))
     .pipe(browserSync.stream());
