@@ -2,15 +2,6 @@ extends _layouts/layout
 
 block content
 
-  //- .c-notification
-  //-   .c-notification_head
-  //-     h6.c-notification_title.c-title Alerta
-  //-     span.c-notification_close x
-
-  //-   .c-notification_body
-  //-     .c-notification_content.c-text Não foi possível cadastrar
-
-
   section.c-section#form-section
     .wrapper
       form.c-form--grid(method='post', id='newuserform')
@@ -107,38 +98,8 @@ block content
                 option(value='RJ') Rio de Janeiro
               label.c-form_label(for='city') Cidade
 
-            .c-form_field
-              button.c-button(type='submit', value='Enviar', id='submit') Enviar
+          .c-form_row
+             button.c-button(type='submit', value='Enviar', id='submit') Enviar
 
   section.c-section#results-section
-    //- input.c-input--toggle(type='checkbox',id='tableMode_toggle')
-    //- section.c-section.o-graphs
-    //-   .wrapper
-
-    //-     .o-graphs_options
-    //-       label.o-graphs_button#tableMode(for="tableMode_toggle") Mudar exibição
-
-    //-     .c-section_block.browsers-hit
-    //-       table.c-table
-    //-         thead.c-table_head
-    //-           tr.c-table_row
-    //-             th.c-table_cell.browser-name Browser
-    //-             th.c-table_cell.browser-usage Distribuição (%)
-
-    //-         tbody.c-table_body
-    //-           tr.c-table_row
-    //-             td.c-table_cell.c-graph--bar Chrome
-    //-               span.c-graph_bar 21%
-    //-             td.c-table_cell 21%
-
-    //-           tr.c-table_row
-    //-             td.c-table_cell.c-graph--bar Chrome
-    //-               span.c-graph_bar 21%
-    //-             td.c-table_cell 21%
-
-    //-           tr.c-table_row
-    //-             td.c-table_cell.c-graph--bar Chrome
-    //-               span.c-graph_bar 21%
-    //-             td.c-table_cell 21%
-
 
