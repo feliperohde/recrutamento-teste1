@@ -1,3 +1,13 @@
+# Falhas #
+
+- O cálculo das temperaturas médias está incorreto (foi validado contra o logado no console);
+- Não valida se as senhas conferem;
+- Aceita emails x@x;
+- Aceita datas de nascimento futuras;
+
+
+
+
 # INSTRUÇÕES #
 
 Neste teste prático você deverá implementar um formulário de cadastro que submete informações para um backend fornecido.
@@ -22,7 +32,7 @@ Para realizar o teste, siga as orientações abaixo e boa sorte!
     * Estado * (state)
     * Cidade * (city)
 
-    Proponha o layout que desejar e as melhores práticas de UX que quiser. Os nomes em parênteses se referem ao id dos elementos no HTML (sua prova será corrigida primeiro por uma bateria de testes automáticos; se você não fizer isso, a correção falhará e você será desqualificado). Campos marcados com asterisco são obrigatórios. 
+    Proponha o layout que desejar e as melhores práticas de UX que quiser. Os nomes em parênteses se referem ao id dos elementos no HTML (sua prova será corrigida primeiro por uma bateria de testes automáticos; se você não fizer isso, a correção falhará e você será desqualificado). Campos marcados com asterisco são obrigatórios.
 
     Para o campo `country`, apenas os seguintes países serão suportados:
 
@@ -50,18 +60,18 @@ Para realizar o teste, siga as orientações abaixo e boa sorte!
     * SV - El Salvador
     * US - Estados Unidos
     * UY - Uruguai
-    * VE - Venezuela 
+    * VE - Venezuela
 
     O código de duas letras no início de cada elemento é o que deve ser enviado ao backend ao submeter o formulário e _não deve ser exibido_ ao usuário.
 
     Para fins de simplificação, o campo `zipCode` receberá apenas CEPs no formato usado no Brasil.
 
-    Deve haver um botão cujo id seja `submit` para enviar os dados. 
+    Deve haver um botão cujo id seja `submit` para enviar os dados.
 
-    O envio será feito para o backend via POST no endereço `http://www.improving.com.br/api/test/users` no seguinte formato JSON:
+    O envio será feito para o backend via POST no endereço `http://www.x.com.br/api/test/users` no seguinte formato JSON:
 
     > {
-    > 	"email": "vagas.tl@improving.com.br",
+    > 	"email": "vagas.tl@x.com.br",
     > 	"password": "minhaSenha",
     > 	"fullName": "Fulano de Tal",
     > 	"birthDate": "05/11/1982",
@@ -83,11 +93,11 @@ Para realizar o teste, siga as orientações abaixo e boa sorte!
     * Qualquer código 5xx ou erro de timeout - Deve ser exibida uma mensagem de que houve um erro de comunicação e o usuário deve tentar novamente mais tarde.
 
 1. Após o cadastro bem-sucedido, deve ser exibido um painel com dois gráficos, no formato que você achar mais apropriado, cujos dados poderão ser obtidos chamando as APIs conforme discriminado abaixo:
-    * Distribuição dos acessos por browser ( `http://www.improving.com.br/api/test/hits-by-browser` ):
+    * Distribuição dos acessos por browser ( `http://www.x.com.br/api/test/hits-by-browser` ):
         * O formato retornado pela API será `[["Firefox", 1038],["IE", 5633],["Chrome", 2403],["Safari", 477],["Opera", 91]]` , ou seja, o nome do browser seguido pela quantidade de acessos feita com ele;
         * Você deverá exibir a _distribuição percentual_ dos acessos por browser no gráfico;
-        * Os percentuais devem ser arredondados na *segunda* casa decimal de acordo com arredondamento financeiro (ex: 15.541 deve ser 15.54; 15.545 deve ser 15.55); 
-    * Temperatura média por mês ( `http://www.improving.com.br/api/test/city-temperatures` ):
+        * Os percentuais devem ser arredondados na *segunda* casa decimal de acordo com arredondamento financeiro (ex: 15.541 deve ser 15.54; 15.545 deve ser 15.55);
+    * Temperatura média por mês ( `http://www.x.com.br/api/test/city-temperatures` ):
         * O formato retornado pela API será `[{"name":"Tokyo","data":[["01-01",7],["02-01",6.9],["03-01",9.5],["04-01",14.5],["05-01",18.4],["06-01",21.5],["07-01",25.2],["08-01",26.5],["09-01",23.3],["10-01",18.3],["11-01",13.9],["12-01",9.6]]},{"name":"London","data":[["01-01",3.9],["02-01",4.2],["03-01",5.7],["04-01",8.5],["05-01",11.9],["06-01",15.2],["07-01",17],["08-01",16.6],["09-01",14.2],["10-01",10.3],["11-01",6.6],["12-01",4.8]]}]`, ou seja:
             * Nome de uma cidade (serão enviadas entre duas e cinco no máximo, sempre);
             * Array em que cada elemento é um dia/mês (`12-01` é 12 de janeiro) e a temperatura média daquele dia;
@@ -101,10 +111,10 @@ Para realizar o teste, siga as orientações abaixo e boa sorte!
     * Qualquer código 5xx ou erro de timeout - Deve ser exibida uma mensagem de que houve um erro de comunicação e o usuário deve tentar novamente mais tarde.
 
     Além dos gráficos, deverá haver um botão cujo id deve ser `tableMode` que, ao ser clicado, exibirá os mesmos dados como tabelas _exatamente com os seguintes conteúdos_ (a fonte, o tamanho das colunas e as bordas são irrelevantes):
-    
+
     Tabela com dados de distribuição de acessos:
 
-    
+
     Browser | Distribuição (%)
     ------- | ---------------:
     Chrome  | 31,09
